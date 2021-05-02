@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     margin: "5px 0px",
     width: "100%",
-    backgroundColor: "#ec7676",
+    backgroundColor: "#1c9b64",
   },
   inline: {
     display: "inline",

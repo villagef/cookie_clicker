@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import BottomNavigation from "@material-ui/core/BottomNavigation";
 import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
@@ -12,11 +11,11 @@ const useStyles = makeStyles({
   root: {
     width: "100%",
     height: "80px",
-    backgroundColor: '#ec7676'
+    backgroundColor: "#1c9b64",
   },
   link: {
-    color: '#fdfdfd'
-  }
+    color: "#fdfdfd",
+  },
 });
 
 function NavigationBar() {
@@ -32,18 +31,18 @@ function NavigationBar() {
         icon={<HomeIcon />}
       />
       <BottomNavigationAction
-      className={classes.link}
+        className={classes.link}
         to="/achievements"
         component={Link}
         label="Achievments"
-        icon={<EmojiEventsIcon />}
+        icon={<EmojiEventsIcon style={{ color: "#dbbe11" }} />}
       />
       <BottomNavigationAction
-      className={classes.link}
+        className={classes.link}
         to="/store"
         component={Link}
         label="Store"
-        icon={<LocalGroceryStoreIcon />}
+        icon={<LocalGroceryStoreIcon fill="#dbbe11" />}
       />
     </BottomNavigation>
   );

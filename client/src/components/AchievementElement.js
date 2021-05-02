@@ -8,11 +8,11 @@ import Typography from "@material-ui/core/Typography";
 import { Paper } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
-    root: {
-        margin: '5px 0px',
-        width: '100%',
-        backgroundColor: '#ec7676'
-    },
+  root: {
+    margin: "5px 0px",
+    width: "100%",
+    backgroundColor: "#1c9b64",
+  },
   inline: {
     display: "inline",
   },
@@ -23,12 +23,17 @@ export default function AchievementElement({ achievement }) {
   const disabled = achievement.active ? false : true;
   return (
     <>
-      <ListItem alignItems="flex-start" className={classes.root} component={Paper} disabled={disabled}>
+      <ListItem
+        alignItems="flex-start"
+        className={classes.root}
+        component={Paper}
+        disabled={disabled}
+      >
         <ListItemAvatar>
           <Avatar alt={achievement.name} src={achievement.imageUrl} />
         </ListItemAvatar>
         <ListItemText
-          primary={achievement.name + ' (speed x' + achievement.extra + ')'}
+          primary={achievement.name + " (speed x" + achievement.extra + ")"}
           secondary={
             <React.Fragment>
               <Typography

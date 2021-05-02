@@ -3,20 +3,15 @@ import Home from "./pages/Home";
 import Achievments from "./pages/Achievements";
 import Store from "./pages/Store";
 import NavigationBar from "./components/NavigationBar";
+import Popper from "./components/Popper";
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useRouteMatch,
-  useParams,
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 export default function App() {
   return (
     <Router>
       <div className="App">
+        <Popper />
         <Switch>
           <Route exact path="/">
             <Home />
