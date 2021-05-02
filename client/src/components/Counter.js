@@ -1,5 +1,6 @@
 import { Paper, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import { useSelector } from 'react-redux';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -21,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Counter({ counter, level }) {
   const classes = useStyles();
+  const cookies = useSelector(state => state.cookies)
 
   return (
     <>
@@ -34,7 +36,7 @@ export default function Counter({ counter, level }) {
     >
       <Grid className={classes.label} item>Score</Grid>
       <Grid className={classes.label} item>
-        {counter}
+        {cookies}
       </Grid>
     </Grid>
     </>

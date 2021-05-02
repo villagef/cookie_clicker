@@ -1,6 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Button, Grid } from "@material-ui/core";
+import { useDispatch } from 'react-redux';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -15,9 +16,17 @@ const useStyles = makeStyles((theme) => ({
 
 export default function NewGameBtn() {
   const classes = useStyles();
+  const dispatch = useDispatch();
+
+  const handleClick = () => {
+    dispatch({
+      type: "CLEARCOOKIES"
+    })
+  }
+
   return (
     <Grid container className={classes.root} alignItems="center">
-      <Button variant="outlined" className={classes.button}>
+      <Button variant="outlined" className={classes.button} onClick={handleClick}>
         New Game
       </Button>
     </Grid>
