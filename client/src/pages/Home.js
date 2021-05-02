@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import CookieBtn from "../components/CookieBtn";
 import Counter from "../components/Counter";
+import NewGameBtn from '../components/NewGameBtn'
 
 export default function Home() {
   let [counter, setCounter] = useState(0);
@@ -20,6 +21,7 @@ export default function Home() {
         </div>
         <CookieBtn handleClick={handleClick} />
         <Counter counter={counter} level={level} />
+        <NewGameBtn />
       </header>
     </>
   );
