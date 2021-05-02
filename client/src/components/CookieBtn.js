@@ -7,6 +7,7 @@ const useStyles = makeStyles({
     backgroundColor: "transparent",
     border: "none",
     borderRadius: "50%",
+    marginTop: '100px'
   },
 });
 

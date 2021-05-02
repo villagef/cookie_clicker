@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import AchievementsTable from "../components/AchievementsTable";
 
 export default function Achievements() {
-    return (
-        <div>
-            Achievements
-        </div>
-    )
+  return (
+    <header className="App-header">
+      <div className="App-title">
+        <p>Achievements</p>
+      </div>
+      <AchievementsTable />
+    </header>
+  );
 }

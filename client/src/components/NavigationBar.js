@@ -12,7 +12,11 @@ const useStyles = makeStyles({
   root: {
     width: "100%",
     height: "80px",
+    backgroundColor: '#ec7676'
   },
+  link: {
+    color: '#fdfdfd'
+  }
 });
 
 function NavigationBar() {
@@ -21,18 +25,21 @@ function NavigationBar() {
   return (
     <BottomNavigation showLabels className={classes.root}>
       <BottomNavigationAction
+        className={classes.link}
         component={Link}
         to="/"
         label="Home"
         icon={<HomeIcon />}
       />
       <BottomNavigationAction
+      className={classes.link}
         to="/achievements"
         component={Link}
         label="Achievments"
         icon={<EmojiEventsIcon />}
       />
       <BottomNavigationAction
+      className={classes.link}
         to="/store"
         component={Link}
         label="Store"

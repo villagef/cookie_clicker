@@ -1,0 +1,11 @@
+[
+    {
+        "id": 0,
+        "name": "Gluten free wheat",
+        "imageUrl": "https://cdn3.iconfinder.com/data/icons/3-education-glyph-black/614/Wheat-512.png",
+        "extra": 1.4,
+        "target": 100,
+        "active": false,
+        "description": "blablabalblablablabla"
+    }
+]
