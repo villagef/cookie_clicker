@@ -1,16 +1,16 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Button, Grid } from "@material-ui/core";
-import { useDispatch } from 'react-redux';
+import { useDispatch } from "react-redux";
 
 const useStyles = makeStyles((theme) => ({
-    root: {
-        padding: '10px 0',
-        justifyContent: 'center'
-    },
+  root: {
+    padding: "10px 0",
+    justifyContent: "center",
+  },
   button: {
-      color: '#dbbe11',
-      borderColor: '#dbbe11'
+    color: "#dbbe11",
+    borderColor: "#dbbe11",
   },
 }));
 
@@ -20,19 +20,26 @@ export default function NewGameBtn() {
 
   const handleClick = () => {
     dispatch({
-      type: "CLEARCOOKIES"
+      type: "CLEARCOOKIES",
     });
     dispatch({
-      type: "CLEARLEVEL"
+      type: "CLEARLEVEL",
     });
     dispatch({
-      type: "CLEARBREAKPOINT"
+      type: "CLEARBREAKPOINT",
     });
-  }
+    sessionStorage.removeItem("cookies");
+    sessionStorage.removeItem("level");
+    sessionStorage.removeItem("breakpoint");
+  };
 
   return (
     <Grid container className={classes.root} alignItems="center">
-      <Button variant="outlined" className={classes.button} onClick={handleClick}>
+      <Button
+        variant="outlined"
+        className={classes.button}
+        onClick={handleClick}
+      >
         New Game
       </Button>
     </Grid>

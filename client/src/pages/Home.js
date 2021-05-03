@@ -6,12 +6,13 @@ import { useSelector, useDispatch } from "react-redux";
 
 export default function Home() {
   const dispatch = useDispatch();
-  const level = useSelector((state) => state.level);
+  let level = useSelector((state) => state.level);
   const cookies = useSelector((state) => state.cookies);
   const breakpoint = useSelector((state) => state.breakpoint);
+  // sessionStorage.setItem('level', level);
 
   const handleLevel = (value) => {
-    if (value === breakpoint) {
+    if (value == breakpoint) {
       dispatch({
         type: "INCREMENTLEVEL",
       });
@@ -24,6 +25,9 @@ export default function Home() {
   useEffect(() => {
     handleLevel(cookies);
   }, [cookies]);
+
+  sessionStorage.setItem("level", level);
+  sessionStorage.setItem("breakpoint", breakpoint);
 
   return (
     <>

@@ -1,11 +1,7 @@
-import React from "react";
+import {useState, useEffect} from "react";
+import { useSelector } from 'react-redux';
 import { makeStyles } from "@material-ui/core/styles";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemText from "@material-ui/core/ListItemText";
-import ListItemAvatar from "@material-ui/core/ListItemAvatar";
-import Avatar from "@material-ui/core/Avatar";
-import Typography from "@material-ui/core/Typography";
-import { Paper } from "@material-ui/core";
+import { Paper, Typography, Avatar, ListItemAvatar, ListItemText, ListItem } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,7 +16,17 @@ const useStyles = makeStyles((theme) => ({
 
 export default function AchievementElement({ achievement }) {
   const classes = useStyles();
+  const cookies = useSelector(state => state.cookies);
   const disabled = achievement.active ? false : true;
+  console.log(cookies);
+  console.log(achievement.target);
+  
+
+  if(cookies == achievement.target) {
+    console.log('nagroda');
+    
+  }
+
   return (
     <>
       <ListItem
@@ -35,7 +41,7 @@ export default function AchievementElement({ achievement }) {
         <ListItemText
           primary={achievement.name + " (speed x" + achievement.extra + ")"}
           secondary={
-            <React.Fragment>
+            <>
               <Typography
                 component="span"
                 variant="body2"
@@ -44,7 +50,7 @@ export default function AchievementElement({ achievement }) {
               >
                 {achievement.description}
               </Typography>
-            </React.Fragment>
+            </>
           }
         />
       </ListItem>

@@ -1,6 +1,9 @@
 import { INCREMENTCOOKIES, CLEARCOOKIES } from "../actions/index";
 
-export default function counterReducer(state = 0, action) {
+const localCookies = sessionStorage.getItem("cookies");
+const value = localCookies ? +localCookies : 0;
+
+export default function counterReducer(state = value, action) {
   switch (action.type) {
     case INCREMENTCOOKIES:
       return (state += 1);

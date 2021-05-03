@@ -9,15 +9,15 @@ import { Paper, ListItem, ListItemText } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
-    height: '100%',
-    margin: '100px 0 30px 0',
-    padding: '5px',
-    overflowY: 'scroll',
+    height: "100%",
+    margin: "100px 0 30px 0",
+    padding: "5px",
+    overflowY: "scroll",
     maxWidth: "36ch",
     backgroundColor: theme.palette.background.paper,
     "&::-webkit-scrollbar": {
-        display: "none",
-      },
+      display: "none",
+    },
   },
 }));
 
@@ -26,16 +26,15 @@ export default function AchievementsTable() {
 
   return (
     <List className={classes.root} component={Paper}>
-        {
-           achievements.length !== 0 ?
-           achievements.map((achievement, index) => (
-            <AchievementElement key={index} achievement={achievement} />
-          )) :
-          <ListItem alignItems="center">
-              <ListItemText primary="No data"/>
-          </ListItem>
-        }
-
+      {achievements.length !== 0 ? (
+        achievements.map((achievement) => (
+          <AchievementElement key={achievement.id} achievement={achievement} />
+        ))
+      ) : (
+        <ListItem alignItems="center">
+          <ListItemText primary="No data" />
+        </ListItem>
+      )}
     </List>
   );
 }

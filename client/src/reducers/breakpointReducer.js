@@ -1,6 +1,8 @@
 import { INCREMENTBREAKPOINT, CLEARBREAKPOINT } from "../actions/index";
+const localLevel = sessionStorage.getItem("breakpoint");
+const value = localLevel ? +localLevel : 10;
 
-export default function breakpointReducer(state = 10, action) {
+export default function breakpointReducer(state = value, action) {
   switch (action.type) {
     case INCREMENTBREAKPOINT:
       return state * 2;
