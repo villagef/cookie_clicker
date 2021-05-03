@@ -3,6 +3,8 @@ import CookieBtn from "../components/CookieBtn";
 import Counter from "../components/Counter";
 import NewGameBtn from "../components/NewGameBtn";
 import { useSelector, useDispatch } from "react-redux";
+//========= PATCH REQUEST IMPORT ============
+import patchRequest from "../requests/patchRequest";
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -28,6 +30,12 @@ export default function Home() {
 
   sessionStorage.setItem("level", level);
   sessionStorage.setItem("breakpoint", breakpoint);
+
+  //============= CALL FOR PATCH METHOD ====================
+  // patchRequest(cookies)
+  //   .then((res) => console.log(res))
+  //   .catch((err) => console.log(err))
+  //   .finally();
 
   return (
     <>
