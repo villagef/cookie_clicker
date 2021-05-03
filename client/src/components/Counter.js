@@ -35,7 +35,7 @@ export default function Counter({ counter, level }) {
       alignItems="center"
     >
       <Grid className={classes.label} item>Score</Grid>
-      <Grid className={classes.label} item>
+      <Grid className={classes.label} item >
         {cookies}
       </Grid>
     </Grid>

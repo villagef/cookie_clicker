@@ -28,8 +28,8 @@ export default function AchievementsTable() {
     <List className={classes.root} component={Paper}>
         {
            achievements.length !== 0 ?
-           achievements.map((achievement) => (
-            <AchievementElement achievement={achievement} />
+           achievements.map((achievement, index) => (
+            <AchievementElement key={index} achievement={achievement} />
           )) :
           <ListItem alignItems="center">
               <ListItemText primary="No data"/>

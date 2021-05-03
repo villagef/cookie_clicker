@@ -28,8 +28,8 @@ export default function StoreTable() {
     <List className={classes.root} component={Paper}>
         {
            bonuses.length !== 0 ?
-           bonuses.map((bonus) => (
-            <StoreElement bonus={bonus} />
+           bonuses.map((bonus, index) => (
+            <StoreElement key={index} bonus={bonus} />
           )) :
           <ListItem alignItems="center">
               <ListItemText primary="No data"/>

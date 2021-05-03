@@ -21,7 +21,13 @@ export default function NewGameBtn() {
   const handleClick = () => {
     dispatch({
       type: "CLEARCOOKIES"
-    })
+    });
+    dispatch({
+      type: "CLEARLEVEL"
+    });
+    dispatch({
+      type: "CLEARBREAKPOINT"
+    });
   }
 
   return (

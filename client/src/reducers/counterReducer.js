@@ -1,6 +1,6 @@
 import { INCREMENTCOOKIES, CLEARCOOKIES } from "../actions/index";
 
-export default function counterReducer (state = 0, action) {
+export default function counterReducer(state = 0, action) {
   switch (action.type) {
     case INCREMENTCOOKIES:
       return (state += 1);
@@ -13,4 +13,4 @@ export default function counterReducer (state = 0, action) {
     default:
       return state;
   }
-};
+}
