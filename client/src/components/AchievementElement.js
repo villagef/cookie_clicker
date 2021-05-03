@@ -1,7 +1,13 @@
-import {useState, useEffect} from "react";
-import { useSelector } from 'react-redux';
+import { useSelector } from "react-redux";
 import { makeStyles } from "@material-ui/core/styles";
-import { Paper, Typography, Avatar, ListItemAvatar, ListItemText, ListItem } from "@material-ui/core";
+import {
+  Paper,
+  Typography,
+  Avatar,
+  ListItemAvatar,
+  ListItemText,
+  ListItem,
+} from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -16,15 +22,14 @@ const useStyles = makeStyles((theme) => ({
 
 export default function AchievementElement({ achievement }) {
   const classes = useStyles();
-  const cookies = useSelector(state => state.cookies);
-  const disabled = achievement.active ? false : true;
-  console.log(cookies);
-  console.log(achievement.target);
-  
+  const cookies = useSelector((state) => state.cookies);
 
-  if(cookies == achievement.target) {
-    console.log('nagroda');
-    
+  const handleDisabled = () => {
+    if(cookies >= achievement.target) {
+      return false;
+    } else {
+      return true;
+    }
   }
 
   return (
@@ -33,7 +38,7 @@ export default function AchievementElement({ achievement }) {
         alignItems="flex-start"
         className={classes.root}
         component={Paper}
-        disabled={disabled}
+        disabled={handleDisabled()}
       >
         <ListItemAvatar>
           <Avatar alt={achievement.name} src={achievement.imageUrl} />

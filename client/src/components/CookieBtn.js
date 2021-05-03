@@ -15,6 +15,7 @@ export default function CookieBtn() {
   const classes = useStyles();
   const dispatch = useDispatch();
   const cookies = useSelector((state) => state.cookies);
+  const boolean = useSelector((state) => state.boolean);
 
   const handleClick = () => {
     dispatch({

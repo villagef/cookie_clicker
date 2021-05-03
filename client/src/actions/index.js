@@ -5,6 +5,8 @@ export const INCREMENTLEVEL = 'INCREMENTLEVEL';
 export const CLEARLEVEL = 'CLEARLEVEL';
 export const INCREMENTBREAKPOINT = 'INCREMENTBREAKPOINT';
 export const CLEARBREAKPOINT = 'CLEARBREAKPOINT';
+export const SETTRUE = 'SETTRUE';
+export const SETFALSE = 'SETFALSE';
 
 //Action creators
 export const incrementCookiesCount = () => {
@@ -40,5 +42,17 @@ export const incrementBreakpoint = () => {
 export const clearBreakpoint = () => {
     return {
         type: CLEARBREAKPOINT
+    }
+};
+
+export const setTrue = () => {
+    return {
+        type: SETTRUE
+    }
+};
+
+export const setFalse = () => {
+    return {
+        type: SETFALSE
     }
 };
