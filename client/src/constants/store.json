@@ -1,11 +1,37 @@
 [
     {
         "id": 0,
-        "name": "3 grandmothers",
-        "imageUrl": "https://cdn3.iconfinder.com/data/icons/3-education-glyph-black/614/Wheat-512.png",
-        "extra": 3,
-        "price": 6000,
-        "active": false,
-        "description": "Three grandmothers helps you triple cookies prodaction"
+        "name": "Mexican Grandma",
+        "imageUrl": "https://image.flaticon.com/icons/png/128/390/390187.png",
+        "speed": 1,
+        "price": 100
+    },
+    {
+        "id": 1,
+        "name": "Gluten-free Wheat",
+        "imageUrl": "https://image.flaticon.com/icons/png/128/2738/2738610.png",
+        "speed": 5,
+        "price": 2000
+    },
+    {
+        "id": 2,
+        "name": "Chef Hat",
+        "imageUrl": "https://image.flaticon.com/icons/png/128/1041/1041615.png",
+        "speed": 20,
+        "price": 50000
+    },
+    {
+        "id": 3,
+        "name": "Thermomix",
+        "imageUrl": "https://image.flaticon.com/icons/png/128/1866/1866311.png",
+        "speed": 100,
+        "price": 100000
+    },
+    {
+        "id": 4,
+        "name": "New Bake",
+        "imageUrl": "https://image.flaticon.com/icons/png/128/3003/3003993.png",
+        "speed": 500,
+        "price": 1000000
     }
 ]

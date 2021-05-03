@@ -44,7 +44,7 @@ export default function AchievementElement({ achievement }) {
           <Avatar alt={achievement.name} src={achievement.imageUrl} />
         </ListItemAvatar>
         <ListItemText
-          primary={achievement.name + " (speed x" + achievement.extra + ")"}
+          primary={achievement.name}
           secondary={
             <>
               <Typography
@@ -53,7 +53,7 @@ export default function AchievementElement({ achievement }) {
                 className={classes.inline}
                 color="textSecondaty"
               >
-                {achievement.description}
+                ({achievement.target} cookies)
               </Typography>
             </>
           }

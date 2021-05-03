@@ -1,11 +1,6 @@
+import { useSelector } from "react-redux";
 import { makeStyles } from "@material-ui/core/styles";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemText from "@material-ui/core/ListItemText";
-import ListItemAvatar from "@material-ui/core/ListItemAvatar";
-import Avatar from "@material-ui/core/Avatar";
-import Typography from "@material-ui/core/Typography";
-import { Paper, ListItemSecondaryAction, IconButton, Button, Grid } from "@material-ui/core";
-import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
+import { Paper, Button, Grid, Typography, Avatar, ListItemAvatar, ListItemText, ListItem } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,20 +15,29 @@ const useStyles = makeStyles((theme) => ({
 
 export default function BonusElement({ bonus }) {
   const classes = useStyles();
-  const disabled = bonus.active ? false : true;
+  const cookies = useSelector((state) => state.cookies);
+
+  const handleDisabled = () => {
+    if(cookies >= bonus.price) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+
   return (
     <>
       <ListItem
         alignItems="center"
         className={classes.root}
         component={Paper}
-        disabled={disabled}
+        disabled={handleDisabled()}
       >
         <ListItemAvatar>
           <Avatar alt={bonus.name} src={bonus.imageUrl} />
         </ListItemAvatar>
         <ListItemText
-          primary={bonus.name + " (speed x" + bonus.extra + ")"}
+          primary={bonus.name}
           secondary={
             <>
               <Typography
@@ -47,13 +51,13 @@ export default function BonusElement({ bonus }) {
                 // className={classes.inline}
                 color="textSecondary"
               >
-                {bonus.description}
+                (Speed x {bonus.speed})
               </Typography>
             </>
           }
         />
         <Grid item>
-          <Button edge="end" aria-label="buy" disabled={disabled}>
+          <Button edge="end" aria-label="buy" disabled={handleDisabled()}>
             BUY
           </Button>
         </Grid>

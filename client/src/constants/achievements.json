@@ -1,29 +1,74 @@
 [
     {
         "id": 0,
-        "name": "Gluten free wheat",
-        "imageUrl": "https://cdn3.iconfinder.com/data/icons/3-education-glyph-black/614/Wheat-512.png",
-        "extra": 1.4,
-        "target": 10,
-        "active": false,
-        "description": "blablabalblablablabla"
+        "name": "Intern",
+        "imageUrl": "https://image.flaticon.com/icons/png/128/940/940649.png",
+        "target": 10
     },
     {
         "id": 1,
-        "name": "Gluten free wheat",
-        "imageUrl": "https://cdn3.iconfinder.com/data/icons/3-education-glyph-black/614/Wheat-512.png",
-        "extra": 1.4,
-        "target": 20,
-        "active": false,
-        "description": "blablabalblablablabla"
+        "name": "Junior",
+        "imageUrl": "https://image.flaticon.com/icons/png/128/781/781290.png",
+        "target": 100
     },
     {
         "id": 2,
-        "name": "Gluten free wheat",
-        "imageUrl": "https://cdn3.iconfinder.com/data/icons/3-education-glyph-black/614/Wheat-512.png",
-        "extra": 1.4,
-        "target": 30,
-        "active": false,
-        "description": "blablabalblablablabla"
+        "name": "Junior Plus",
+        "imageUrl": "https://image.flaticon.com/icons/png/128/2376/2376374.png",
+        "target": 500
+    },
+    {
+        "id": 3,
+        "name": "Regular",
+        "imageUrl": "https://image.flaticon.com/icons/png/128/1853/1853076.png",
+        "target": 2000
+    },
+    {
+        "id": 4,
+        "name": "Regular Plus",
+        "imageUrl": "https://image.flaticon.com/icons/png/128/405/405311.png",
+        "target": 5000
+    },
+    {
+        "id": 5,
+        "name": "Senior",
+        "imageUrl": "https://image.flaticon.com/icons/png/128/1866/1866061.png",
+        "target": 10000
+    },
+    {
+        "id": 6,
+        "name": "Senior Plus",
+        "imageUrl": "https://image.flaticon.com/icons/png/128/994/994195.png",
+        "target": 30000
+    },
+    {
+        "id": 7,
+        "name": "Sugar Daddy",
+        "imageUrl": "https://image.flaticon.com/icons/png/128/2284/2284964.png",
+        "target": 100000
+    },
+    {
+        "id": 8,
+        "name": "Magda Gessler Son",
+        "imageUrl": "https://image.flaticon.com/icons/png/128/1055/1055242.png",
+        "target": 500000
+    },
+    {
+        "id": 9,
+        "name": "Cookies Ninja",
+        "imageUrl": "https://image.flaticon.com/icons/png/128/1071/1071164.png",
+        "target": 1000000
+    },
+    {
+        "id": 10,
+        "name": "Superman",
+        "imageUrl": "https://www.flaticon.com/svg/vstatic/svg/1674/1674292.svg?token=exp=1620053661~hmac=aadd048129002945b2111d7e96602498",
+        "target": 10000000
+    },
+    {
+        "id": 11,
+        "name": "Sensei",
+        "imageUrl": "https://image.flaticon.com/icons/png/128/2534/2534504.png",
+        "target": 100000000
     }
 ]

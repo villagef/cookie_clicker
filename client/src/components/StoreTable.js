@@ -9,15 +9,15 @@ import { Paper, ListItem, ListItemText } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
-    height: '100%',
-    margin: '100px 0 30px 0',
-    padding: '5px',
-    overflowY: 'scroll',
+    height: "100%",
+    margin: "100px 0 30px 0",
+    padding: "5px",
+    overflowY: "scroll",
     maxWidth: "36ch",
     backgroundColor: theme.palette.background.paper,
     "&::-webkit-scrollbar": {
-        display: "none",
-      },
+      display: "none",
+    },
   },
 }));
 
@@ -26,16 +26,13 @@ export default function StoreTable() {
 
   return (
     <List className={classes.root} component={Paper}>
-        {
-           bonuses.length !== 0 ?
-           bonuses.map((bonus, index) => (
-            <StoreElement key={index} bonus={bonus} />
-          )) :
-          <ListItem alignItems="center">
-              <ListItemText primary="No data"/>
-          </ListItem>
-        }
-
+      {bonuses.length !== 0 ? (
+        bonuses.map((bonus) => <StoreElement key={bonus.id} bonus={bonus} />)
+      ) : (
+        <ListItem alignItems="center">
+          <ListItemText primary="No data" />
+        </ListItem>
+      )}
     </List>
   );
 }
