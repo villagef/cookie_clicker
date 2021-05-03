@@ -1,6 +1,8 @@
+import { useEffect, useState } from "react";
 import { Paper, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { useInterval } from "react-use-timeout";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -22,7 +24,30 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Counter() {
   const classes = useStyles();
+  const dispatch = useDispatch();
   const cookies = useSelector((state) => state.cookies);
+  const speedArr = sessionStorage.getItem("speed");
+
+  const handleDelay = () => {
+    let init = 1000;
+    if (speedArr) {
+      const value = speedArr.split(",").reduce((a, b) => +a + +b, 0);
+      init = Math.max(init / value, 1);
+      return init;
+    }
+  };
+
+  const interval = useInterval((e) => {
+    dispatch({ type: "INCREMENTCOOKIES" });
+  }, handleDelay());
+
+  useEffect(() => {
+    if (speedArr) {
+      interval.start();
+    } else {
+      interval.stop();
+    }
+  }, [cookies]);
 
   return (
     <>

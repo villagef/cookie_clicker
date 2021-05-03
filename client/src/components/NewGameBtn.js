@@ -28,9 +28,7 @@ export default function NewGameBtn() {
     dispatch({
       type: "CLEARBREAKPOINT",
     });
-    sessionStorage.removeItem("cookies");
-    sessionStorage.removeItem("level");
-    sessionStorage.removeItem("breakpoint");
+    sessionStorage.clear();
   };
 
   return (

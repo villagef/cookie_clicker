@@ -3,14 +3,14 @@
         "id": 0,
         "name": "Mexican Grandma",
         "imageUrl": "https://image.flaticon.com/icons/png/128/390/390187.png",
-        "speed": 1,
+        "speed": 0.8,
         "price": 100
     },
     {
         "id": 1,
         "name": "Gluten-free Wheat",
         "imageUrl": "https://image.flaticon.com/icons/png/128/2738/2738610.png",
-        "speed": 5,
+        "speed": 2,
         "price": 2000
     },
     {

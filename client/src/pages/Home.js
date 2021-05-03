@@ -11,7 +11,6 @@ export default function Home() {
   let level = useSelector((state) => state.level);
   const cookies = useSelector((state) => state.cookies);
   const breakpoint = useSelector((state) => state.breakpoint);
-  // sessionStorage.setItem('level', level);
 
   const handleLevel = (value) => {
     if (value == breakpoint) {
@@ -36,6 +35,7 @@ export default function Home() {
   //   .then((res) => console.log(res))
   //   .catch((err) => console.log(err))
   //   .finally();
+
 
   return (
     <>

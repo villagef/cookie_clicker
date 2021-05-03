@@ -1,6 +1,16 @@
 import { useSelector } from "react-redux";
 import { makeStyles } from "@material-ui/core/styles";
-import { Paper, Button, Grid, Typography, Avatar, ListItemAvatar, ListItemText, ListItem } from "@material-ui/core";
+import {
+  Paper,
+  Grid,
+  Typography,
+  Avatar,
+  ListItemAvatar,
+  ListItemText,
+  ListItem,
+} from "@material-ui/core";
+
+import BuyButton from "./BuyButton";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -18,12 +28,12 @@ export default function BonusElement({ bonus }) {
   const cookies = useSelector((state) => state.cookies);
 
   const handleDisabled = () => {
-    if(cookies >= bonus.price) {
+    if (cookies >= bonus.price) {
       return false;
     } else {
       return true;
     }
-  }
+  };
 
   return (
     <>
@@ -40,9 +50,7 @@ export default function BonusElement({ bonus }) {
           primary={bonus.name}
           secondary={
             <>
-              <Typography
-                color="textPrimary"
-              >
+              <Typography color="textPrimary">
                 Price: {bonus.price} cookies
               </Typography>
               <Typography
@@ -57,9 +65,7 @@ export default function BonusElement({ bonus }) {
           }
         />
         <Grid item>
-          <Button edge="end" aria-label="buy" disabled={handleDisabled()}>
-            BUY
-          </Button>
+          <BuyButton bonus={bonus} handleDisabled={handleDisabled} />
         </Grid>
       </ListItem>
     </>

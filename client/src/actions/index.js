@@ -1,5 +1,6 @@
 //Action types
 export const INCREMENTCOOKIES = 'INCREMENTCOOKIES';
+export const DECREMENTCOOKIES = 'DECREMENTCOOKIES';
 export const CLEARCOOKIES = 'CLEARCOOKIES';
 export const INCREMENTLEVEL = 'INCREMENTLEVEL';
 export const CLEARLEVEL = 'CLEARLEVEL';
@@ -12,6 +13,12 @@ export const SETFALSE = 'SETFALSE';
 export const incrementCookiesCount = () => {
     return {
         type: INCREMENTCOOKIES
+    }
+};
+
+export const decrementCookiesCount = () => {
+    return {
+        type: DECREMENTCOOKIES
     }
 };
 
@@ -45,13 +52,25 @@ export const clearBreakpoint = () => {
     }
 };
 
-export const setTrue = () => {
+export const activatePopper = () => {
     return {
         type: SETTRUE
     }
 };
 
-export const setFalse = () => {
+export const deactivatePopper = () => {
+    return {
+        type: SETFALSE
+    }
+};
+
+export const activateInterval = () => {
+    return {
+        type: SETTRUE
+    }
+};
+
+export const deactivateInterval = () => {
     return {
         type: SETFALSE
     }
