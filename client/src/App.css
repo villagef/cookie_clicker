@@ -10,9 +10,8 @@
   height: 100px;
   font-size: 1.5rem;
 }
-
-.App-title p {
-  margin-bottom: 0;
+.App-title p{
+margin-bottom: 0;
 }
 
 .App-logo {
@@ -20,7 +19,6 @@
   max-height: 300px;
   pointer-events: none;
   border-radius: 50%;
-  user-select: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -42,6 +40,24 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.preventHighlights {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.App-button {
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  margin-top: 100px;
+  cursor: pointer;
 }
 
 @keyframes App-logo-spin {

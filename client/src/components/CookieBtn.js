@@ -1,19 +1,7 @@
 import logo from "../logo.svg";
-import { makeStyles } from "@material-ui/core/styles";
 import { useDispatch, useSelector } from "react-redux";
 
-const useStyles = makeStyles({
-  button: {
-    backgroundColor: "transparent",
-    border: "none",
-    borderRadius: "50%",
-    marginTop: "100px",
-    cursor: "pointer",
-  },
-});
-
 export default function CookieBtn() {
-  const classes = useStyles();
   const dispatch = useDispatch();
   const cookies = useSelector((state) => state.cookies);
   const total = useSelector((state) => state.total);
@@ -31,8 +19,8 @@ export default function CookieBtn() {
 
   return (
     <>
-      <div className={classes.button} onClick={handleClick}>
-        <img src={logo} className="App-logo" alt="logo" />
+      <div className="App-button preventHighlights" onClick={handleClick}>
+        <img src={logo} className="App-logo preventHighlights" alt="cookie" />
       </div>
     </>
   );

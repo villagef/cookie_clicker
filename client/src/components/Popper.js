@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
 export default function AchievementPopper() {
   const classes = useStyles();
   const dispatch = useDispatch();
-  const cookies = useSelector((state) => state.cookies);
+  const total = useSelector((state) => state.total);
   const boolean = useSelector((state) => state.boolean);
   const targets = achievements.map((d) => d.target);
 
@@ -38,11 +38,11 @@ export default function AchievementPopper() {
 
   useEffect(() => {
     targets.forEach((target) => {
-      if (target === cookies) {
+      if (target === total) {
         handleBoolean();
       }
     });
-  }, [cookies]);
+  }, [total]);
 
   return (
     <Popper className={classes.root} open={boolean} placement="top" transition>
