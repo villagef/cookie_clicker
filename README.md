@@ -1,9 +1,9 @@
 # Cookie Clicker
 
-### This is better version of cookie clicker game ;) 
-### You have to click the cookie to gain cookies.
-### You need cookies to buy auto-clickers
-### The more cookies you have the more achievements you get.
+#### This is better version of cookie clicker game ;) 
+#### You have to click the cookie to gain cookies.
+#### You need cookies to buy auto-clickers
+#### The more cookies you have the more achievements you get.
 
 ### You can go to deployed website uses the link below:
 
