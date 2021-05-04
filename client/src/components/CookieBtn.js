@@ -16,13 +16,18 @@ export default function CookieBtn() {
   const classes = useStyles();
   const dispatch = useDispatch();
   const cookies = useSelector((state) => state.cookies);
+  const total = useSelector((state) => state.total);
 
   const handleClick = () => {
     dispatch({
       type: "INCREMENTCOOKIES",
     });
+    dispatch({
+      type: "INCREMENTTOTAL",
+    });
   };
   sessionStorage.setItem("cookies", cookies);
+  sessionStorage.setItem("total", total);
 
   return (
     <>

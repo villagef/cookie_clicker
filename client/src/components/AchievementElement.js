@@ -22,15 +22,15 @@ const useStyles = makeStyles((theme) => ({
 
 export default function AchievementElement({ achievement }) {
   const classes = useStyles();
-  const cookies = useSelector((state) => state.cookies);
+  const total = useSelector((state) => state.total);
 
   const handleDisabled = () => {
-    if(cookies >= achievement.target) {
+    if (total >= achievement.target) {
       return false;
     } else {
       return true;
     }
-  }
+  };
 
   return (
     <>

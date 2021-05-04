@@ -2,6 +2,8 @@
 export const INCREMENTCOOKIES = 'INCREMENTCOOKIES';
 export const DECREMENTCOOKIES = 'DECREMENTCOOKIES';
 export const CLEARCOOKIES = 'CLEARCOOKIES';
+export const INCREMENTTOTAL = 'INCREMENTTOTAL';
+export const CLEARTOTAL = 'CLEARTOTAL';
 export const INCREMENTLEVEL = 'INCREMENTLEVEL';
 export const CLEARLEVEL = 'CLEARLEVEL';
 export const INCREMENTBREAKPOINT = 'INCREMENTBREAKPOINT';
@@ -25,6 +27,18 @@ export const decrementCookiesCount = () => {
 export const clearCookies = () => {
     return {
         type: CLEARCOOKIES
+    }
+};
+
+export const incrementTotal = () => {
+    return {
+        type: INCREMENTTOTAL
+    }
+};
+
+export const clearTotal = () => {
+    return {
+        type: CLEARTOTAL
     }
 };
 

@@ -28,6 +28,9 @@ export default function NewGameBtn() {
     dispatch({
       type: "CLEARBREAKPOINT",
     });
+    dispatch({
+      type: "CLEARTOTAL",
+    });
     sessionStorage.clear();
   };
 
