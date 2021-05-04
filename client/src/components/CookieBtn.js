@@ -8,6 +8,7 @@ const useStyles = makeStyles({
     border: "none",
     borderRadius: "50%",
     marginTop: "100px",
+    cursor: "pointer",
   },
 });
 
@@ -15,7 +16,6 @@ export default function CookieBtn() {
   const classes = useStyles();
   const dispatch = useDispatch();
   const cookies = useSelector((state) => state.cookies);
-  const boolean = useSelector((state) => state.boolean);
 
   const handleClick = () => {
     dispatch({
@@ -26,9 +26,9 @@ export default function CookieBtn() {
 
   return (
     <>
-      <button className={classes.button} onClick={handleClick}>
+      <div className={classes.button} onClick={handleClick}>
         <img src={logo} className="App-logo" alt="logo" />
-      </button>
+      </div>
     </>
   );
 }
