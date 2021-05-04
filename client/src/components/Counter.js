@@ -39,6 +39,7 @@ export default function Counter() {
 
   const interval = useInterval((e) => {
     dispatch({ type: "INCREMENTCOOKIES" });
+    dispatch({ type: "INCREMENTTOTAL" });
   }, handleDelay());
 
   useEffect(() => {
