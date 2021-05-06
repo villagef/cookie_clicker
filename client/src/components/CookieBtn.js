@@ -1,5 +1,6 @@
 import logo from "../logo.svg";
 import { useDispatch, useSelector } from "react-redux";
+import { incrementCookiesCount, incrementTotal } from "../actions/index";
 
 export default function CookieBtn() {
   const dispatch = useDispatch();
@@ -7,12 +8,8 @@ export default function CookieBtn() {
   const total = useSelector((state) => state.total);
 
   const handleClick = () => {
-    dispatch({
-      type: "INCREMENTCOOKIES",
-    });
-    dispatch({
-      type: "INCREMENTTOTAL",
-    });
+    dispatch(incrementCookiesCount());
+    dispatch(incrementTotal());
   };
   sessionStorage.setItem("cookies", cookies);
   sessionStorage.setItem("total", total);

@@ -2,6 +2,12 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Button, Grid } from "@material-ui/core";
 import { useDispatch } from "react-redux";
+import {
+  clearCookies,
+  clearTotal,
+  clearLevel,
+  clearBreakpoint,
+} from "../actions/index";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -19,19 +25,10 @@ export default function NewGameBtn() {
   const dispatch = useDispatch();
 
   const handleClick = () => {
-    dispatch({
-      type: "CLEARCOOKIES",
-    });
-    dispatch({
-      type: "CLEARLEVEL",
-    });
-    dispatch({
-      type: "CLEARBREAKPOINT",
-    });
-    dispatch({
-      type: "CLEARTOTAL",
-    });
-    sessionStorage.clear();
+    dispatch(clearCookies());
+    dispatch(clearTotal());
+    dispatch(clearLevel());
+    dispatch(clearBreakpoint());
   };
 
   return (

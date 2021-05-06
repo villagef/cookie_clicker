@@ -3,6 +3,7 @@ import CookieBtn from "../components/CookieBtn";
 import Counter from "../components/Counter";
 import NewGameBtn from "../components/NewGameBtn";
 import { useSelector, useDispatch } from "react-redux";
+import { incrementLevelCount, incrementBreakpoint } from "../actions/index";
 //========= PATCH REQUEST IMPORT ============
 import patchRequest from "../requests/patchRequest";
 
@@ -14,12 +15,8 @@ export default function Home() {
 
   const handleLevel = (value) => {
     if (value == breakpoint) {
-      dispatch({
-        type: "INCREMENTLEVEL",
-      });
-      dispatch({
-        type: "INCREMENTBREAKPOINT",
-      });
+      dispatch(incrementLevelCount());
+      dispatch(incrementBreakpoint());
     }
   };
 
@@ -35,7 +32,6 @@ export default function Home() {
   //   .then((res) => console.log(res))
   //   .catch((err) => console.log(err))
   //   .finally();
-
 
   return (
     <>

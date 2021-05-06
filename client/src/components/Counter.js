@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Paper, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { useSelector, useDispatch } from "react-redux";
 import { useInterval } from "react-use-timeout";
+import { incrementCookiesCount, incrementTotal } from "../actions/index";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -38,8 +39,8 @@ export default function Counter() {
   };
 
   const interval = useInterval((e) => {
-    dispatch({ type: "INCREMENTCOOKIES" });
-    dispatch({ type: "INCREMENTTOTAL" });
+    dispatch(incrementCookiesCount());
+    dispatch(incrementTotal());
   }, handleDelay());
 
   useEffect(() => {
